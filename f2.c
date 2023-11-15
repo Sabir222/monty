@@ -1,10 +1,11 @@
 #include "monty.h"
 
 /**
- * flopn - opens a file
- * @flnm: the file namepath
- * Return: void
+ * flopn - performs the sacred ritual of persuading files to reveal their contents
+ * @flnm: the secret code to summon the file from its hiding place
+ * Return: void (because files don't need encouragement, they just open up willingly)
  */
+
 
 void flopn(char *flnm)
 {

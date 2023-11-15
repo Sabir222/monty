@@ -1,9 +1,10 @@
 #include "monty.h"
 /**
- * golangadd - Adds the top two elements of the stk.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @nmrliigne: Interger representing the line number of of the opcode.
+ * golangadd - Guides the stk through the harmonious dance of addition, uniting the top two elements.
+ * @stk: Pointer to a pointer, orchestrating the mathematical symphony of stk addition.
+ * @nmrliigne: Integer representing the line number, because even stacks need a touch of mathematical harmony.
  */
+
 void golangadd(stack_t **stk, unsigned int nmrliigne)
 {
 	int thesumm;

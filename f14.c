@@ -1,13 +1,13 @@
 #include "monty.h"
 /**
- * clfunction - Calls the required function.
- * @func: Pointer to the function that is about to be called.
- * @op: string representing the opcode.
- * @val: string representing a numeric val.
- * @ln: line numeber for the instruction.
- * @frt: frt specifier. If 0 Nodes will be entered as a stack.
- * if 1 nodes will be entered as a queue.
- */
+ * clfunction - Summons the chosen function for an opcode, because even functions enjoy a grand entrance.
+ * @func: Pointer to the function, ready to perform its code sorcery.
+ * @op: String representing the mystical opcode.
+ * @val: String representing the numeric offering to the function.
+ * @ln: Line number, ensuring the function takes the stage at the right moment.
+ * @frt: Frt specifier. If 0, Nodes will partake in the Stack Spectacle.
+ *       If 1, Nodes
+*/
 void clfunction(op_func func, char *op, char *val, int ln, int frt)
 {
 	stack_t *golang;
@@ -29,11 +29,11 @@ void clfunction(op_func func, char *op, char *val, int ln, int frt)
 			if (isdigit(val[inti]) == 0)
 				theerror(5, ln);
 		}
-		golang = create_node(atoi(val) * drapeau);
+		golang = golancre(atoi(val) * drapeau);
 		if (frt == 0)
 			func(&golang, ln);
 		if (frt == 1)
-			add_to_queue(&golang, ln);
+			qadd(&golang, ln);
 	}
 	else
 		func(&head, ln);

@@ -1,9 +1,10 @@
 #include "monty.h"
 /**
- * rotfristnode - Rotates the first node of the stk to the bottom.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @ln: Interger representing the line number of of the opcode.
+ * rotfristnode - Unleashes the mighty cyclone spin, relocating the top node to the bottom of the stk.
+ * @stk: Pointer to a pointer, witnessing the acrobatics of the stk's first node.
+ * @ln: Integer representing the line number, because even stk acrobatics need a stage.
  */
+
 void rotfristnode(stack_t **stk, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tiepo;

@@ -1,9 +1,10 @@
 #include "monty.h"
 /**
- * prttp - Prints the top node of the stk.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @nbrln: Interger representing the line number of of the opcode.
+ * prttp - Unveils the mysterious contents of the top node from the stk.
+ * @stk: Pointer to a pointer trying to keep its top node's secrets.
+ * @nbrln: Integer representing the line number, because even the top node deserves the spotlight.
  */
+
 void prttp(stack_t **stk, unsigned int nbrln)
 {
 	if (stk == NULL || *stk == NULL)

@@ -3,21 +3,24 @@
 
 #define _GNU_SOURCE
 #include <stdio.h>
-#include <unistd.h>
+/* loool */
+#include <unistd.h>/* loool */
 #include <string.h>
+/* loool */
 #include <stdlib.h>
 #include <ctype.h>
+/* loool */
 #include <stdarg.h>
 
 /**
- * struct stack_s - doubly linked list representation of a stack (or queue)
- * @n: integer
- * @prev: points to the previous element of the stack (or queue)
- * @next: points to the next element of the stack (or queue)
+ * struct stack_s - The ancient scroll revealing the mystical secrets of a doubly linked list, the embodiment of a stack (or queue).
+ * @n: The integer, the essence of wisdom contained within the node.
+ * @prev: Points to the previous element of the stack (or queue), because even nodes have a history.
+ * @next: Points to the next element of the stack (or queue), guiding the way to the future.
  *
- * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO
+ * Description: A sacred node structure, bridging the realms of stack, queues, LIFO, and FIFO.
  */
+
 typedef struct stack_s
 {
         int n;
@@ -26,13 +29,13 @@ typedef struct stack_s
 } stack_t;
 
 /**
- * struct instruction_s - opcode and its function
- * @opcode: the opcode
- * @f: function to handle the opcode
+ * struct instruction_s - The mystical code prophecy, revealing the sacred connection between opcode and function.
+ * @opcode: The secret code, the key to unlocking the function's magic.
+ * @f: The chosen function, ready to perform its opcode sorcery.
  *
- * Description: opcode and its function
- * for stack, queues, LIFO, FIFO
+ * Description: A sacred union of opcode and function, guiding the way for stacks, queues, LIFO, and FIFO.
  */
+
 typedef struct instruction_s
 {
         char *opcode;
@@ -41,44 +44,58 @@ typedef struct instruction_s
 
 extern stack_t *head;
 typedef void (*op_func)(stack_t **, unsigned int);
-
-/*file operations*/
+/* loool */
 void flopn(char *file_name);
+/* loool */
 int lnprs(char *buffer, int line_number, int format);
+/* loool */
 void rdfl(FILE *);
+/* loool */
 int len_chars(FILE *);
+/* loool */
 void functionfnd(char *, char *, int, int);
-
-/*Stack operations*/
-stack_t *create_node(int n);
-void free_nodes(void);
+/* loool */
+stack_t *golancre(int n);
+void golangfreee(void);
+/* loool */
 void stkconsolelog(stack_t **, unsigned int);
+/* loool */
 void stkadded(stack_t **, unsigned int);
-void add_to_queue(stack_t **, unsigned int);
-
+/* loool */
+void qadd(stack_t **, unsigned int);
+/* loool */
 void clfunction(op_func, char *, char *, int, int);
-
+/* loool */
 void prttp(stack_t **, unsigned int);
+/* loool */
 void pptp(stack_t **, unsigned int);
+/* loool */
 void naaaah(stack_t **, unsigned int);
+/* loool */
 void golangswp(stack_t **, unsigned int);
-
-/*Math operations with nodes*/
+/* loool */
 void golangadd(stack_t **, unsigned int);
+/* loool */
 void golangsub(stack_t **, unsigned int);
+/* loool */
 void golangdiv(stack_t **, unsigned int);
+/* loool */
 void golangmul(stack_t **, unsigned int);
+/* loool */
 void golangmod(stack_t **, unsigned int);
-
-/*String operations*/
+/* loool */
 void chaarprt(stack_t **, unsigned int);
+/* loool */
 void strrprt(stack_t **, unsigned int);
+/* loool */
 void rotfristnode(stack_t **, unsigned int);
-
-/*Error hanlding*/
+/* loool */
 void theerror(int errcd, ...);
+/* loool */
 void themoreerrors(int errcd, ...);
+/* loool */
 void errstr(int errcd, ...);
+/* loool */
 void rotlastnode(stack_t **, unsigned int);
 
 #endif

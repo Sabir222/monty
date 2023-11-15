@@ -1,10 +1,11 @@
 #include "monty.h"
 /**
- * errstr - handles errors.
- * @errcd: The error codes are the following:
- * (10) ~> The number inside a node is outside ASCII bounds.
- * (11) ~> The stack is empty.
+ * errstr - Masters the delicate art of error handling, turning mishaps into a symphony of chaos.
+ * @errcd: The error codes and their dramatic entries:
+ * (10) ~> When a node reveals a number beyond the mystical ASCII boundaries.
+ * (11) ~> When the stack experiences an existential crisis and turns into a void of emptiness.
  */
+
 void errstr(int errcd, ...)
 {
 	va_list greggor;
@@ -23,6 +24,6 @@ void errstr(int errcd, ...)
 		default:
 			break;
 	}
-	free_nodes();
+	golangfreee();
 	exit(EXIT_FAILURE);
 }

@@ -1,9 +1,10 @@
 #include "monty.h"
 /**
- * golangdiv - Adds the top two elements of the stk.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @nmrliigne: Interger representing the line number of of the opcode.
+ * golangdiv - Initiates the stk in the sacred ritual of division by tackling the top two elements.
+ * @stk: Pointer to a pointer, navigating the mathematical maze of stk division.
+ * @nmrliigne: Integer representing the line number, because even stacks need a taste of mathematical daring.
  */
+
 void golangdiv(stack_t **stk, unsigned int nmrliigne)
 {
 	int thesumm;

@@ -1,9 +1,10 @@
 #include "monty.h"
 /**
- * golangsub - Adds the top two elements of the stk.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @nmrliigne: Interger representing the line number of of the opcode.
+ * golangsub - Dives into the stk's top two elements, attempting the daring feat of subtraction.
+ * @stk: Pointer to a pointer, preparing for the mathematical acrobatics of stk subtraction.
+ * @nmrliigne: Integer representing the line number, because even stacks need a touch of mathematical drama.
  */
+
 void golangsub(stack_t **stk, unsigned int nmrliigne)
 {
 	int thesumm;

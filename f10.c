@@ -4,11 +4,12 @@
 
 
 /**
- * rotlastnode - Rotates the last node of the stk to the top.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @ln: Interger representing the line number of of the opcode.
+ * rotlastnode - Executes the majestic spin move on the top node of the stk.
+ * @stk: Pointer to a pointer trying to impress its top node with a dance routine.
+ * @ligne: Integer representing the line number, because even code deserves a stage.
  */
-void rotlastnode(stack_t **stk, __attribute__((unused))unsigned int ln)
+
+void rotlastnode(stack_t **stk, __attribute__((unused))unsigned int ligne)
 {
 	stack_t *tiepo;
 

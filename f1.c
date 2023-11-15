@@ -1,17 +1,10 @@
 #include "monty.h"
 
 /**
- * theerror - Prints appropiate error messages determined by their error code.
- * @errcd: The error codes are the following:
- * (1) => The user does not give any file or more than one file to the program.
- * (2) => The file provided is not a file that can be opened or read.
- * (3) => The file provided contains an invalid instruction.
- * (4) => When the program is unable to malloc more memory.
- * (5) => When the parameter passed to the instruction "push" is not an int.
- * (6) => When the stack it empty for pint.
- * (7) => When the stack it empty for pop.
- * (8) => When stack is too short for operation.
+ * theerror - Deciphers the cosmic code of errors and translates them into appropriately amusing messages.
+ * @errcd: The mysterious error codes and their hidden meanings:
  */
+
 void theerror(int errcd, ...)
 {
 	va_list greggor;
@@ -42,7 +35,7 @@ void theerror(int errcd, ...)
 		default:
 			break;
 	}
-	free_nodes();
+	golangfreee();
 	exit(EXIT_FAILURE);
 }
 

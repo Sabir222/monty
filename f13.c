@@ -1,9 +1,10 @@
 #include "monty.h"
 /**
- * rdfl - reads a file
- * @fd: pointer to file descriptor
- * Return: void
+ * rdfl - Masters the ancient art of reading a file, unlocking its secrets with the key of file descriptor.
+ * @fd: Pointer to the mystical file descriptor, the gateway to the file's hidden treasures.
+ * Return: void, because even files appreciate a good read without unnecessary commentary.
  */
+
 
 void rdfl(FILE *fd)
 {

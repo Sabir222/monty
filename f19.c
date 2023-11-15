@@ -1,10 +1,11 @@
 #include "monty.h"
 
 /**
- * golangmul - Adds the top two elements of the stk.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @lnnbr: Interger representing the line number of of the opcode.
+ * golangmul - Teaches the stk the art of multiplication by adding the top two elements.
+ * @stk: Pointer to a pointer, attempting the mathematical tango with the stk's top elements.
+ * @lnnbr: Integer representing the line number, because even stacks appreciate a good math dance.
  */
+
 void golangmul(stack_t **stk, unsigned int lnnbr)
 {
 	int thesummm;

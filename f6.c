@@ -1,10 +1,11 @@
 #include "monty.h"
 
 /**
- * chaarprt - Prints the skiii value.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @lgnnumb: Interger representing the line number of of the opcode.
+ * chaarprt - Reveals the mystical skiii value, because even stacks have a sense of style.
+ * @stk: Pointer to a pointer, guarding the skiii value with code fashion.
+ * @lgnnumb: Integer representing the line number, because skiii values need to be on the runway.
  */
+
 void chaarprt(stack_t **stk, unsigned int lgnnumb)
 {
 	int skiii;

@@ -2,30 +2,32 @@
 stack_t *head = NULL;
 
 /**
- * main - entry point
- * @argc: arguments count
- * @argv: list of arguments
- * Return: always 0
+ * main - The grand entrance, the beginning of the epic tale.
+ * @cccrgc: The number of arguments, because even code deserves a welcoming committee.
+ * @vvvrg: The list of arguments, the characters in this grand script.
+ * Return: Always 0, because in the realm of main, success is the only ending.
  */
 
-int main(int argc, char *argv[])
+
+int main(int cccrgc, char *vvvrg[])
 {
-	if (argc != 2)
+	if (cccrgc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	flopn(argv[1]);
-	free_nodes();
+	flopn(vvvrg[1]);
+	golangfreee();
 	return (0);
 }
 
 /**
- * create_node - Creates a node.
- * @n: Number to go inside the node.
- * Return: Upon sucess a pointer to the node. Otherwise NULL.
+ * golancre - Summons a new node into existence, filling it with the magical essence of a number.
+ * @n: The mystical number destined to reside within the newly created node.
+ * Return: Upon success, a pointer to the newborn node. Otherwise, a somber NULL, for not all creations are destined to flourish.
  */
-stack_t *create_node(int n)
+
+stack_t *golancre(int n)
 {
 	stack_t *node;
 
@@ -39,45 +41,47 @@ stack_t *create_node(int n)
 }
 
 /**
- * free_nodes - Frees nodes in the stack.
+ * golangfreee - Liberates the imprisoned nodes within the stack, setting them free into the code wilderness.
  */
-void free_nodes(void)
+
+void golangfreee(void)
 {
-	stack_t *tmp;
+	stack_t *tiempo;
 
 	if (head == NULL)
 		return;
 
 	while (head != NULL)
 	{
-		tmp = head;
+		tiempo = head;
 		head = head->next;
-		free(tmp);
+		free(tiempo);
 	}
 }
 
 
 /**
- * add_to_queue - Adds a node to the queue.
- * @new_node: Pointer to the new node.
- * @ln: line number of the opcode.
+ * qadd - Enlists a new node into the ranks of the queue, because even nodes need a sense of order.
+ * @golannow: Pointer to the newcomer, ready to join the orderly queue.
+ * @ligne: Line number of the opcode, ensuring the queue maintains its disciplined formation.
  */
-void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
-{
-	stack_t *tmp;
 
-	if (new_node == NULL || *new_node == NULL)
+void qadd(stack_t **golannow, __attribute__((unused))unsigned int ligne)
+{
+	stack_t *tiempo;
+
+	if (golannow == NULL || *golannow == NULL)
 		exit(EXIT_FAILURE);
 	if (head == NULL)
 	{
-		head = *new_node;
+		head = *golannow;
 		return;
 	}
-	tmp = head;
-	while (tmp->next != NULL)
-		tmp = tmp->next;
+	tiempo = head;
+	while (tiempo->next != NULL)
+		tiempo = tiempo->next;
 
-	tmp->next = *new_node;
-	(*new_node)->prev = tmp;
+	tiempo->next = *golannow;
+	(*golannow)->prev = tiempo;
 
 }

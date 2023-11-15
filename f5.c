@@ -4,10 +4,11 @@
 
 
 /**
- * golangmod - Adds the top two elements of the stk.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @lnnbr: Interger representing the line number of of the opcode.
+ * golangmod - Teaches the stk the art of summation by adding the top two elements.
+ * @stk: Pointer to a pointer, trying to master the ancient dance of addition.
+ * @lnnbr: Integer representing the line number, because even stacks need to follow the rhythm of math.
  */
+
 void golangmod(stack_t **stk, unsigned int lnnbr)
 {
 	int thesummm;

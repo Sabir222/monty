@@ -1,12 +1,9 @@
 #include "monty.h"
 /**
- * themoreerrors - handles errors.
- * @errcd: The error codes are the following:
- * (6) => When the stack it empty for pint.
- * (7) => When the stack it empty for pop.
- * (8) => When stack is too short for operation.
- * (9) => Division by zero.
+ * themoreerrors - Juggles errors like a pro, because even errors need a bit of showmanship.
+ * @errcd: The error codes and their dramatic entrances:
  */
+
 void themoreerrors(int errcd, ...)
 {
 	va_list greggor;
@@ -36,6 +33,6 @@ void themoreerrors(int errcd, ...)
 		default:
 			break;
 	}
-	free_nodes();
+	golangfreee();
 	exit(EXIT_FAILURE);
 }

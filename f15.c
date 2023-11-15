@@ -1,13 +1,14 @@
 #include "monty.h"
 /**
- * functionfnd - find the appropriate function for the opcode
- * @opcode: opcode
- * @val: argument of opcode
- * @frt:  storage frt. If 0 Nodes will be entered as a stack.
- * @ln: line number
- * if 1 nodes will be entered as a queue.
- * Return: void
+ * functionfnd - Embarks on an epic quest to find the perfect function for the mystical opcode.
+ * @opcode: The secret code that unlocks the function door.
+ * @val: The mysterious argument accompanying the opcode.
+ * @frt: Storage frt. If 0, Nodes will join the noble Stack of Code Knights.
+ *       If 1, Nodes will become loyal members of the Queue of Patient Waiters.
+ * @ln: Line number, guiding the function on its adventurous journey.
+ * Return: void, because even functions need a sense of mystery.
  */
+
 void functionfnd(char *opcode, char *val, int ln, int frt)
 {
 	int inti;

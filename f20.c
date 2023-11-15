@@ -1,9 +1,10 @@
 #include "monty.h"
 /**
- * strrprt - Prints a string.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @ln: Interger representing the line number of of the opcode.
+ * strrprt - Unveils the mystical incantations of a string held within the stk.
+ * @stk: Pointer to a pointer, guarding the ancient words of the stk's string magic.
+ * @ln: Integer representing the line number, because even strings deserve a moment in the spotlight.
  */
+
 void strrprt(stack_t **stk, __attribute__((unused))unsigned int ln)
 {
 	int skiii;

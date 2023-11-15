@@ -4,9 +4,9 @@
 
 
 /**
- * stkconsolelog - Adds a node to the stk.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @nbrln: line number of  the opcode.
+ * stkconsolelog - Captures the essence of a node and adds it to the stk, because even stacks need a diary.
+ * @stk: Pointer to a pointer, witnessing the confessions of nodes.
+ * @nbrln: Line number of the opcode, because even diary entries have timestamps.
  */
 void stkconsolelog(stack_t **stk, unsigned int nbrln)
 {
@@ -24,10 +24,11 @@ void stkconsolelog(stack_t **stk, unsigned int nbrln)
 }
 
 /**
- * pptp - Adds a node to the stk.
- * @stk: Pointer to a pointer pointing to top node of the stk.
- * @nbrln: Interger representing the line number of of the opcode.
+ * pptp - Puts another node on the stk pedestal, because even stacks appreciate a good presentation.
+ * @stk: Pointer to a pointer, hosting the grand ceremony of node addition.
+ * @nbrln: Integer representing the line number, because stk events need proper documentation.
  */
+
 void pptp(stack_t **stk, unsigned int nbrln)
 {
 	stack_t *tiepo;

@@ -2,10 +2,11 @@
 #include "monty.h"
 
 /**
- * stkadded - Adds a node to the stk.
- * @ngolang: Pointer to the new node.
- * @liigne: Interger representing the line number of of the opcode.
+ * stkadded - Welcomes a new member to the stk family.
+ * @ngolang: Pointer to the newcomer, ready to join the stk squad.
+ * @liigne: Integer representing the line number, because even nodes need a sense of direction.
  */
+
 void stkadded(stack_t **ngolang, __attribute__((unused))unsigned int liigne)
 {
 	stack_t *tiepo;
