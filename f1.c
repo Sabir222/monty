@@ -1,11 +1,5 @@
 #include "monty.h"
 
-
-
-
-
-
-
 /**
  * theerror - Prints appropiate error messages determined by their error code.
  * @errcd: The error codes are the following:
