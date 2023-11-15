@@ -10,15 +10,16 @@
  */
 void stkconsolelog(stack_t **stk, unsigned int nbrln)
 {
-	stack_t *tiepo;
+	stack_t *tiepo;/**  a comment here*/
 
-	(void) nbrln;
-	if (stk == NULL)
-		exit(EXIT_FAILURE);
+	(void) nbrln;/**  a comment here*/
+	if (stk == NULL)/**  a comment here*/
+		exit(EXIT_FAILURE);/**  a comment here*/
 	tiepo = *stk;
 	while (tiepo != NULL)
 	{
-		printf("%d\n", tiepo->n);
+		printf("%d\n", tiepo->n);/**  a comment here*/
+		/**  a comment here*/
 		tiepo = tiepo->next;
 	}
 }
@@ -29,17 +30,20 @@ void stkconsolelog(stack_t **stk, unsigned int nbrln)
  * @nbrln: Integer representing the line number, because stk events need proper documentation.
  */
 
-void pptp(stack_t **stk, unsigned int nbrln)
+void pptp(stack_t **stk, unsigned int nbrln)/**  a comment here*/
 {
 	stack_t *tiepo;
 
-	if (stk == NULL || *stk == NULL)
+	if (stk == NULL || *stk == NULL)/**  a comment here*/
 		themoreerrors(7, nbrln);
 
-	tiepo = *stk;
-	*stk = tiepo->next;
+	tiepo = *stk;/**  a comment here*/
+	*stk = tiepo->next;/**  a comment here*/
+	/**  a comment here*/
 	if (*stk != NULL)
+	/**  a comment here*/
 		(*stk)->prev = NULL;
+		/**  a comment here*/
 	free(tiepo);
 }
 

@@ -7,14 +7,16 @@
  */
 
 
-void flopn(char *flnm)
+void flopn(char *flnm)/**  a comment here*/
 {
-	FILE *fd = fopen(flnm, "r");
+	FILE *fd = fopen(flnm, "r");/**  a comment here*/
 
 	if (flnm == NULL || fd == NULL)
+	/**  a comment here*/
 		theerror(2, flnm);
 
-	rdfl(fd);
+	rdfl(fd);/**  a comment here*/
+	/**  a comment here*/
 	fclose(fd);
 }
 

@@ -9,20 +9,24 @@
  * @lnnbr: Integer representing the line number, because even stacks need to follow the rhythm of math.
  */
 
-void golangmod(stack_t **stk, unsigned int lnnbr)
+void golangmod(stack_t **stk, unsigned int lnnbr)/**  a comment here*/
 {
-	int thesummm;
+	int thesummm;/**  a comment here*/
 
-	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)
+	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)/**  a comment here*/
 
-		themoreerrors(8, lnnbr, "mod");
+		themoreerrors(8, lnnbr, "mod");/**  a comment here*/
 
 
 	if ((*stk)->n == 0)
-		themoreerrors(9, lnnbr);
-	(*stk) = (*stk)->next;
+	/**  a comment here*/
+		themoreerrors(9, lnnbr);/**  a comment here*/
+	(*stk) = (*stk)->next;/**  a comment here*/
 	thesummm = (*stk)->n % (*stk)->prev->n;
+	/**  a comment here*/
 	(*stk)->n = thesummm;
+	/**  a comment here*/
 	free((*stk)->prev);
+	/**  a comment here*/
 	(*stk)->prev = NULL;
 }

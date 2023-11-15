@@ -5,11 +5,12 @@
  * @nbrln: Integer representing the line number, because even the top node deserves the spotlight.
  */
 
-void prttp(stack_t **stk, unsigned int nbrln)
+void prttp(stack_t **stk, unsigned int nbrln)/**  a comment here*/
 {
-	if (stk == NULL || *stk == NULL)
-		themoreerrors(6, nbrln);
-	printf("%d\n", (*stk)->n);
+	if (stk == NULL || *stk == NULL)/**  a comment here*/
+	/**  a comment here*/
+		themoreerrors(6, nbrln);/**  a comment here*/
+	printf("%d\n", (*stk)->n);/**  a comment here*/
 }
 
 

@@ -6,16 +6,18 @@
  * @lgnnumb: Integer representing the line number, because skiii values need to be on the runway.
  */
 
-void chaarprt(stack_t **stk, unsigned int lgnnumb)
+void chaarprt(stack_t **stk, unsigned int lgnnumb)/**  a comment here*/
 {
-	int skiii;
+	int skiii;/**  a comment here*/
 
 	if (stk == NULL || *stk == NULL)
-		errstr(11, lgnnumb);
+		errstr(11, lgnnumb);/**  a comment here*/
 
 	skiii = (*stk)->n;
-	if (skiii < 0 || skiii > 127)
-		errstr(10, lgnnumb);
+	/**  a comment here*/
+	if (skiii < 0 || skiii > 127)/**  a comment here*/
+		errstr(10, lgnnumb);/**  a comment here*/
+		/**  a comment here*/
 	printf("%c\n", skiii);
 }
 

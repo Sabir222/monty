@@ -6,10 +6,11 @@
  * @nmrliigne: Integer representing the line number, because even nothingness deserves acknowledgment.
  */
 
-void naaaah(stack_t **stk, unsigned int nmrliigne)
+void naaaah(stack_t **stk, unsigned int nmrliigne)/**  a comment here*/
 {
 	(void)stk;
-	(void)nmrliigne;
+	/**  a comment here*/
+	(void)nmrliigne;/**  a comment here*/
 }
 
 

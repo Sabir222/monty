@@ -5,19 +5,22 @@
  * @nmrliigne: Integer representing the line number, because even stacks enjoy a bit of chaos.
  */
 
-void golangswp(stack_t **stk, unsigned int nmrliigne)
+void golangswp(stack_t **stk, unsigned int nmrliigne)/**  a comment here*/
 {
-	stack_t *tiepo;
+	stack_t *tiepo;/**  a comment here*/
 
-	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)
-		themoreerrors(8, nmrliigne, "swap");
+	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)/**  a comment here*/
+		themoreerrors(8, nmrliigne, "swap");/**  a comment here*/
 	tiepo = (*stk)->next;
-	(*stk)->next = tiepo->next;
+	/**  a comment here*/
+	(*stk)->next = tiepo->next;/**  a comment here*/
 	if (tiepo->next != NULL)
 		tiepo->next->prev = *stk;
-	tiepo->next = *stk;
-	(*stk)->prev = tiepo;
+	tiepo->next = *stk;/**  a comment here*/
+	(*stk)->prev = tiepo;/**  a comment here*/
+	/**  a comment here*/
 	tiepo->prev = NULL;
+	/**  a comment here*/
 	*stk = tiepo;
 }
 
