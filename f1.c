@@ -2,46 +2,6 @@
 
 
 
-/**
- * themoreerrors - handles errors.
- * @errcd: The error codes are the following:
- * (6) => When the stack it empty for pint.
- * (7) => When the stack it empty for pop.
- * (8) => When stack is too short for operation.
- * (9) => Division by zero.
- */
-void themoreerrors(int errcd, ...)
-{
-	va_list greggor;
-	char *opapapap;
-	int numbeeeer;
-
-	va_start(greggor, errcd);
-	switch (errcd)
-	{
-		case 6:
-			fprintf(stderr, "L%d: can't pint, stack empty\n",
-				va_arg(greggor, int));
-			break;
-		case 7:
-			fprintf(stderr, "L%d: can't pop an empty stack\n",
-				va_arg(greggor, int));
-			break;
-		case 8:
-			numbeeeer = va_arg(greggor, unsigned int);
-			opapapap = va_arg(greggor, char *);
-			fprintf(stderr, "L%d: can't %s, stack too short\n", numbeeeer, opapapap);
-			break;
-		case 9:
-			fprintf(stderr, "L%d: division by zero\n",
-				va_arg(greggor, unsigned int));
-			break;
-		default:
-			break;
-	}
-	free_nodes();
-	exit(EXIT_FAILURE);
-}
 
 
 
@@ -93,30 +53,3 @@ void theerror(int errcd, ...)
 }
 
 
-/**
- * errstr - handles errors.
- * @errcd: The error codes are the following:
- * (10) ~> The number inside a node is outside ASCII bounds.
- * (11) ~> The stack is empty.
- */
-void errstr(int errcd, ...)
-{
-	va_list greggor;
-	int numbeeeer;
-
-	va_start(greggor, errcd);
-	numbeeeer = va_arg(greggor, int);
-	switch (errcd)
-	{
-		case 10:
-			fprintf(stderr, "L%d: can't pchar, value out of range\n", numbeeeer);
-			break;
-		case 11:
-			fprintf(stderr, "L%d: can't pchar, stack empty\n", numbeeeer);
-			break;
-		default:
-			break;
-	}
-	free_nodes();
-	exit(EXIT_FAILURE);
-}
