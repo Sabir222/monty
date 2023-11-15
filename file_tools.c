@@ -138,12 +138,12 @@ void functionfnd(char *opcode, char *val, int ln, int frt)
 		{"add", golangadd},
 		{"sub", golangsub},
 		{"div", golangdiv},
-		{"mul", mul_nodes},
-		{"mod", mod_nodes},
-		{"pchar", print_char},
-		{"pstr", print_str},
-		{"rotl", rotl},
-		{"rotr", rotr},
+		{"mul", golangmul},
+		{"mod", golangmod},
+		{"pchar", chaarprt},
+		{"pstr", strrprt},
+		{"rotfristnode", rotfristnode},
+		{"rotlastnode", rotlastnode},
 		{NULL, NULL}
 	};
 

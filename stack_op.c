@@ -1,44 +1,44 @@
 #include "monty.h"
 
 /**
- * mul_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * golangmul - Adds the top two elements of the stk.
+ * @stk: Pointer to a pointer pointing to top node of the stk.
+ * @lnnbr: Interger representing the line number of of the opcode.
  */
-void mul_nodes(stack_t **stack, unsigned int line_number)
+void golangmul(stack_t **stk, unsigned int lnnbr)
 {
-	int sum;
+	int thesummm;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		themoreerrors(8, line_number, "mul");
+	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)
+		themoreerrors(8, lnnbr, "mul");
 
-	(*stack) = (*stack)->next;
-	sum = (*stack)->n * (*stack)->prev->n;
-	(*stack)->n = sum;
-	free((*stack)->prev);
-	(*stack)->prev = NULL;
+	(*stk) = (*stk)->next;
+	thesummm = (*stk)->n * (*stk)->prev->n;
+	(*stk)->n = thesummm;
+	free((*stk)->prev);
+	(*stk)->prev = NULL;
 }
 
 
 /**
- * mod_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * golangmod - Adds the top two elements of the stk.
+ * @stk: Pointer to a pointer pointing to top node of the stk.
+ * @lnnbr: Interger representing the line number of of the opcode.
  */
-void mod_nodes(stack_t **stack, unsigned int line_number)
+void golangmod(stack_t **stk, unsigned int lnnbr)
 {
-	int sum;
+	int thesummm;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)
 
-		themoreerrors(8, line_number, "mod");
+		themoreerrors(8, lnnbr, "mod");
 
 
-	if ((*stack)->n == 0)
-		themoreerrors(9, line_number);
-	(*stack) = (*stack)->next;
-	sum = (*stack)->n % (*stack)->prev->n;
-	(*stack)->n = sum;
-	free((*stack)->prev);
-	(*stack)->prev = NULL;
+	if ((*stk)->n == 0)
+		themoreerrors(9, lnnbr);
+	(*stk) = (*stk)->next;
+	thesummm = (*stk)->n % (*stk)->prev->n;
+	(*stk)->n = thesummm;
+	free((*stk)->prev);
+	(*stk)->prev = NULL;
 }

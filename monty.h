@@ -67,18 +67,18 @@ void golangswp(stack_t **, unsigned int);
 void golangadd(stack_t **, unsigned int);
 void golangsub(stack_t **, unsigned int);
 void golangdiv(stack_t **, unsigned int);
-void mul_nodes(stack_t **, unsigned int);
-void mod_nodes(stack_t **, unsigned int);
+void golangmul(stack_t **, unsigned int);
+void golangmod(stack_t **, unsigned int);
 
 /*String operations*/
-void print_char(stack_t **, unsigned int);
-void print_str(stack_t **, unsigned int);
-void rotl(stack_t **, unsigned int);
+void chaarprt(stack_t **, unsigned int);
+void strrprt(stack_t **, unsigned int);
+void rotfristnode(stack_t **, unsigned int);
 
 /*Error hanlding*/
 void theerror(int error_code, ...);
 void themoreerrors(int error_code, ...);
 void errstr(int error_code, ...);
-void rotr(stack_t **, unsigned int);
+void rotlastnode(stack_t **, unsigned int);
 
 #endif
