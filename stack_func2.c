@@ -1,97 +1,100 @@
 #include "monty.h"
 
 /**
- * nop - Does nothing.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * naaaah - Does nothing.
+ * @stk: Pointer to a pointer pointing to top node of the stk.
+ * @nmrliigne: Interger representing the line number of of the opcode.
  */
-void nop(stack_t **stack, unsigned int line_number)
+void naaaah(stack_t **stk, unsigned int nmrliigne)
 {
-	(void)stack;
-	(void)line_number;
+	(void)stk;
+	(void)nmrliigne;
 }
 
 
 /**
- * swap_nodes - Swaps the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * golangswp - Swaps the top two elements of the stk.
+ * @stk: Pointer to a pointer pointing to top node of the stk.
+ * @nmrliigne: Interger representing the line number of of the opcode.
  */
-void swap_nodes(stack_t **stack, unsigned int line_number)
+void golangswp(stack_t **stk, unsigned int nmrliigne)
 {
-	stack_t *tmp;
+	stack_t *tiepo;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		themoreerrors(8, line_number, "swap");
-	tmp = (*stack)->next;
-	(*stack)->next = tmp->next;
-	if (tmp->next != NULL)
-		tmp->next->prev = *stack;
-	tmp->next = *stack;
-	(*stack)->prev = tmp;
-	tmp->prev = NULL;
-	*stack = tmp;
-}
-
-/**
- * add_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
- */
-void add_nodes(stack_t **stack, unsigned int line_number)
-{
-	int sum;
-
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		themoreerrors(8, line_number, "add");
-
-	(*stack) = (*stack)->next;
-	sum = (*stack)->n + (*stack)->prev->n;
-	(*stack)->n = sum;
-	free((*stack)->prev);
-	(*stack)->prev = NULL;
+	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)
+		themoreerrors(8, nmrliigne, "swap");
+	tiepo = (*stk)->next;
+	(*stk)->next = tiepo->next;
+	if (tiepo->next != NULL)
+		tiepo->next->prev = *stk;
+	tiepo->next = *stk;
+	(*stk)->prev = tiepo;
+	tiepo->prev = NULL;
+	*stk = tiepo;
 }
 
 
+
+
+
 /**
- * sub_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * golangdiv - Adds the top two elements of the stk.
+ * @stk: Pointer to a pointer pointing to top node of the stk.
+ * @nmrliigne: Interger representing the line number of of the opcode.
  */
-void sub_nodes(stack_t **stack, unsigned int line_number)
+void golangdiv(stack_t **stk, unsigned int nmrliigne)
 {
-	int sum;
+	int thesumm;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)
+		themoreerrors(8, nmrliigne, "div");
 
-		themoreerrors(8, line_number, "sub");
+	if ((*stk)->n == 0)
+		themoreerrors(9, nmrliigne);
+	(*stk) = (*stk)->next;
+	thesumm = (*stk)->n / (*stk)->prev->n;
+	(*stk)->n = thesumm;
+	free((*stk)->prev);
+	(*stk)->prev = NULL;
+}
+
+/**
+ * golangsub - Adds the top two elements of the stk.
+ * @stk: Pointer to a pointer pointing to top node of the stk.
+ * @nmrliigne: Interger representing the line number of of the opcode.
+ */
+void golangsub(stack_t **stk, unsigned int nmrliigne)
+{
+	int thesumm;
+
+	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)
+
+		themoreerrors(8, nmrliigne, "sub");
 
 
-	(*stack) = (*stack)->next;
-	sum = (*stack)->n - (*stack)->prev->n;
-	(*stack)->n = sum;
-	free((*stack)->prev);
-	(*stack)->prev = NULL;
+	(*stk) = (*stk)->next;
+	thesumm = (*stk)->n - (*stk)->prev->n;
+	(*stk)->n = thesumm;
+	free((*stk)->prev);
+	(*stk)->prev = NULL;
 }
 
 
 /**
- * div_nodes - Adds the top two elements of the stack.
- * @stack: Pointer to a pointer pointing to top node of the stack.
- * @line_number: Interger representing the line number of of the opcode.
+ * golangadd - Adds the top two elements of the stk.
+ * @stk: Pointer to a pointer pointing to top node of the stk.
+ * @nmrliigne: Interger representing the line number of of the opcode.
  */
-void div_nodes(stack_t **stack, unsigned int line_number)
+void golangadd(stack_t **stk, unsigned int nmrliigne)
 {
-	int sum;
+	int thesumm;
 
-	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		themoreerrors(8, line_number, "div");
+	if (stk == NULL || *stk == NULL || (*stk)->next == NULL)
+		themoreerrors(8, nmrliigne, "add");
 
-	if ((*stack)->n == 0)
-		themoreerrors(9, line_number);
-	(*stack) = (*stack)->next;
-	sum = (*stack)->n / (*stack)->prev->n;
-	(*stack)->n = sum;
-	free((*stack)->prev);
-	(*stack)->prev = NULL;
+	(*stk) = (*stk)->next;
+	thesumm = (*stk)->n + (*stk)->prev->n;
+	(*stk)->n = thesumm;
+	free((*stk)->prev);
+	(*stk)->prev = NULL;
 }

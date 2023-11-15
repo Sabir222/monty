@@ -60,13 +60,13 @@ void clfunction(op_func, char *, char *, int, int);
 
 void prttp(stack_t **, unsigned int);
 void pptp(stack_t **, unsigned int);
-void nop(stack_t **, unsigned int);
-void swap_nodes(stack_t **, unsigned int);
+void naaaah(stack_t **, unsigned int);
+void golangswp(stack_t **, unsigned int);
 
 /*Math operations with nodes*/
-void add_nodes(stack_t **, unsigned int);
-void sub_nodes(stack_t **, unsigned int);
-void div_nodes(stack_t **, unsigned int);
+void golangadd(stack_t **, unsigned int);
+void golangsub(stack_t **, unsigned int);
+void golangdiv(stack_t **, unsigned int);
 void mul_nodes(stack_t **, unsigned int);
 void mod_nodes(stack_t **, unsigned int);
 
