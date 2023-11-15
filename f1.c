@@ -4,20 +4,20 @@
 
 /**
  * themoreerrors - handles errors.
- * @error_code: The error codes are the following:
+ * @errcd: The error codes are the following:
  * (6) => When the stack it empty for pint.
  * (7) => When the stack it empty for pop.
  * (8) => When stack is too short for operation.
  * (9) => Division by zero.
  */
-void themoreerrors(int error_code, ...)
+void themoreerrors(int errcd, ...)
 {
 	va_list greggor;
 	char *opapapap;
 	int numbeeeer;
 
-	va_start(greggor, error_code);
-	switch (error_code)
+	va_start(greggor, errcd);
+	switch (errcd)
 	{
 		case 6:
 			fprintf(stderr, "L%d: can't pint, stack empty\n",
@@ -48,7 +48,7 @@ void themoreerrors(int error_code, ...)
 
 /**
  * theerror - Prints appropiate error messages determined by their error code.
- * @error_code: The error codes are the following:
+ * @errcd: The error codes are the following:
  * (1) => The user does not give any file or more than one file to the program.
  * (2) => The file provided is not a file that can be opened or read.
  * (3) => The file provided contains an invalid instruction.
@@ -58,14 +58,14 @@ void themoreerrors(int error_code, ...)
  * (7) => When the stack it empty for pop.
  * (8) => When stack is too short for operation.
  */
-void theerror(int error_code, ...)
+void theerror(int errcd, ...)
 {
 	va_list greggor;
 	char *opapapap;
 	int numbeeeer;
 
-	va_start(greggor, error_code);
-	switch (error_code)
+	va_start(greggor, errcd);
+	switch (errcd)
 	{
 		case 1:
 			fprintf(stderr, "USAGE: monty file\n");
@@ -95,18 +95,18 @@ void theerror(int error_code, ...)
 
 /**
  * errstr - handles errors.
- * @error_code: The error codes are the following:
+ * @errcd: The error codes are the following:
  * (10) ~> The number inside a node is outside ASCII bounds.
  * (11) ~> The stack is empty.
  */
-void errstr(int error_code, ...)
+void errstr(int errcd, ...)
 {
 	va_list greggor;
 	int numbeeeer;
 
-	va_start(greggor, error_code);
+	va_start(greggor, errcd);
 	numbeeeer = va_arg(greggor, int);
-	switch (error_code)
+	switch (errcd)
 	{
 		case 10:
 			fprintf(stderr, "L%d: can't pchar, value out of range\n", numbeeeer);

@@ -76,9 +76,9 @@ void strrprt(stack_t **, unsigned int);
 void rotfristnode(stack_t **, unsigned int);
 
 /*Error hanlding*/
-void theerror(int error_code, ...);
-void themoreerrors(int error_code, ...);
-void errstr(int error_code, ...);
+void theerror(int errcd, ...);
+void themoreerrors(int errcd, ...);
+void errstr(int errcd, ...);
 void rotlastnode(stack_t **, unsigned int);
 
 #endif
