@@ -129,10 +129,10 @@ void functionfnd(char *opcode, char *val, int ln, int frt)
 	int drapeau;
 
 	instruction_t lstFunc[] = {
-		{"push", add_to_stack},
-		{"pall", print_stack},
-		{"pint", print_top},
-		{"pop", pop_top},
+		{"push", stkadded},
+		{"pall", stkconsolelog},
+		{"pint", prttp},
+		{"pop", pptp},
 		{"nop", nop},
 		{"swap", swap_nodes},
 		{"add", add_nodes},
