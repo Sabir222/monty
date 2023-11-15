@@ -1,90 +1,90 @@
 #include "monty.h"
 
 /**
- * open_file - opens a file
- * @file_name: the file namepath
+ * flopn - opens a file
+ * @flnm: the file namepath
  * Return: void
  */
 
-void open_file(char *file_name)
+void flopn(char *flnm)
 {
-	FILE *fd = fopen(file_name, "r");
+	FILE *fd = fopen(flnm, "r");
 
-	if (file_name == NULL || fd == NULL)
-		theerror(2, file_name);
+	if (flnm == NULL || fd == NULL)
+		theerror(2, flnm);
 
-	read_file(fd);
+	rdfl(fd);
 	fclose(fd);
 }
 
 
 /**
- * read_file - reads a file
+ * rdfl - reads a file
  * @fd: pointer to file descriptor
  * Return: void
  */
 
-void read_file(FILE *fd)
+void rdfl(FILE *fd)
 {
-	int line_number, format = 0;
-	char *buffer = NULL;
+	int nbrln, frt = 0;
+	char *bfr = NULL;
 	size_t len = 0;
 
-	for (line_number = 1; getline(&buffer, &len, fd) != -1; line_number++)
+	for (nbrln = 1; getline(&bfr, &len, fd) != -1; nbrln++)
 	{
-		format = parse_line(buffer, line_number, format);
+		frt = lnprs(bfr, nbrln, frt);
 	}
-	free(buffer);
+	free(bfr);
 }
 
 
 /**
- * parse_line - Separates each line into tokens to determine
+ * lnprs - Separates each line into tokens to determine
  * which function to call
- * @buffer: line from the file
- * @line_number: line number
- * @format:  storage format. If 0 Nodes will be entered as a stack.
+ * @bfr: line from the file
+ * @nbrln: line number
+ * @frt:  storage frt. If 0 Nodes will be entered as a stack.
  * if 1 nodes will be entered as a queue.
  * Return: Returns 0 if the opcode is stack. 1 if queue.
  */
 
-int parse_line(char *buffer, int line_number, int format)
+int lnprs(char *bfr, int nbrln, int frt)
 {
-	char *opcode, *value;
-	const char *delim = "\n ";
+	char *opcode, *val;
+	const char *delimeter = "\n ";
 
-	if (buffer == NULL)
+	if (bfr == NULL)
 		theerror(4);
 
-	opcode = strtok(buffer, delim);
+	opcode = strtok(bfr, delimeter);
 	if (opcode == NULL)
-		return (format);
-	value = strtok(NULL, delim);
+		return (frt);
+	val = strtok(NULL, delimeter);
 
 	if (strcmp(opcode, "stack") == 0)
 		return (0);
 	if (strcmp(opcode, "queue") == 0)
 		return (1);
 
-	find_func(opcode, value, line_number, format);
-	return (format);
+	functionfnd(opcode, val, nbrln, frt);
+	return (frt);
 }
 
 /**
- * find_func - find the appropriate function for the opcode
+ * functionfnd - find the appropriate function for the opcode
  * @opcode: opcode
- * @value: argument of opcode
- * @format:  storage format. If 0 Nodes will be entered as a stack.
+ * @val: argument of opcode
+ * @frt:  storage frt. If 0 Nodes will be entered as a stack.
  * @ln: line number
  * if 1 nodes will be entered as a queue.
  * Return: void
  */
-void find_func(char *opcode, char *value, int ln, int format)
+void functionfnd(char *opcode, char *val, int ln, int frt)
 {
-	int i;
-	int flag;
+	int inti;
+	int drapeau;
 
-	instruction_t func_list[] = {
+	instruction_t lstFunc[] = {
 		{"push", add_to_stack},
 		{"pall", print_stack},
 		{"pint", print_top},
@@ -106,54 +106,54 @@ void find_func(char *opcode, char *value, int ln, int format)
 	if (opcode[0] == '#')
 		return;
 
-	for (flag = 1, i = 0; func_list[i].opcode != NULL; i++)
+	for (drapeau = 1, inti = 0; lstFunc[inti].opcode != NULL; inti++)
 	{
-		if (strcmp(opcode, func_list[i].opcode) == 0)
+		if (strcmp(opcode, lstFunc[inti].opcode) == 0)
 		{
-			call_fun(func_list[i].f, opcode, value, ln, format);
-			flag = 0;
+			clfunction(lstFunc[inti].f, opcode, val, ln, frt);
+			drapeau = 0;
 		}
 	}
-	if (flag == 1)
+	if (drapeau == 1)
 		theerror(3, ln, opcode);
 }
 
 
 /**
- * call_fun - Calls the required function.
+ * clfunction - Calls the required function.
  * @func: Pointer to the function that is about to be called.
  * @op: string representing the opcode.
- * @val: string representing a numeric value.
+ * @val: string representing a numeric val.
  * @ln: line numeber for the instruction.
- * @format: Format specifier. If 0 Nodes will be entered as a stack.
+ * @frt: frt specifier. If 0 Nodes will be entered as a stack.
  * if 1 nodes will be entered as a queue.
  */
-void call_fun(op_func func, char *op, char *val, int ln, int format)
+void clfunction(op_func func, char *op, char *val, int ln, int frt)
 {
-	stack_t *node;
-	int flag;
-	int i;
+	stack_t *golang;
+	int drapeau;
+	int inti;
 
-	flag = 1;
+	drapeau = 1;
 	if (strcmp(op, "push") == 0)
 	{
 		if (val != NULL && val[0] == '-')
 		{
 			val = val + 1;
-			flag = -1;
+			drapeau = -1;
 		}
 		if (val == NULL)
 			theerror(5, ln);
-		for (i = 0; val[i] != '\0'; i++)
+		for (inti = 0; val[inti] != '\0'; inti++)
 		{
-			if (isdigit(val[i]) == 0)
+			if (isdigit(val[inti]) == 0)
 				theerror(5, ln);
 		}
-		node = create_node(atoi(val) * flag);
-		if (format == 0)
-			func(&node, ln);
-		if (format == 1)
-			add_to_queue(&node, ln);
+		golang = create_node(atoi(val) * drapeau);
+		if (frt == 0)
+			func(&golang, ln);
+		if (frt == 1)
+			add_to_queue(&golang, ln);
 	}
 	else
 		func(&head, ln);
